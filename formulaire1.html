@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire de Souhait</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #0044cc, #6600cc);
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .formulaire {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+            width: 300px;
+        }
+
+        .formulaire h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .formulaire label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .formulaire input[type="text"],
+        .formulaire input[type="email"],
+        .formulaire textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        .formulaire textarea {
+            resize: vertical;
+            margin-top: 10px;
+        }
+
+        .formulaire input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        .boutons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+
+        .envoyer {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .reinitialiser {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .retour {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .retour a {
+            color: #0044cc;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form class="formulaire">
+            <h2>Formulaire de Souhait</h2>
+
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required>
+
+            <label for="email">E-mail :</label>
+            <input type="email" id="email" name="email" required>
+
+            <p>Votre souhait :</p>
+            <label><input type="radio" name="souhait" value="riche"> Être riche</label><br>
+            <label><input type="radio" name="souhait" value="celebre"> Être célèbre</label><br>
+            <label><input type="radio" name="souhait" value="intelligent"> Être encore plus intelligent</label><br>
+            <label><input type="radio" name="souhait" value="autre"> Autre...</label>
+
+            <textarea placeholder="Précisez votre souhait ici..." rows="3"></textarea>
+
+            <div class="boutons">
+                <button type="submit" class="envoyer">Envoyer</button>
+                <button type="reset" class="reinitialiser">Réinitialiser</button>
+            </div>
+
+            <p class="retour"><a href="menu.html">Retour à l'accueil</a></p>
+        </form>
+    </div>
+</body>
+</html> 

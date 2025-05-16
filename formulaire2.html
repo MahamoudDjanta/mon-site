@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Inscription Étudiant</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #e6ecf0;
+      padding: 30px;
+    }
+    .form-box {
+      background: #ffffff;
+      padding: 25px;
+      max-width: 650px;
+      margin: 0 auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    fieldset {
+      border: none;
+      margin-bottom: 20px;
+    }
+    legend {
+      font-weight: bold;
+      color: #2980b9;
+      margin-bottom: 10px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      color: #333;
+    }
+    input[type="text"], input[type="email"], select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .checkbox-group, .radio-group {
+      margin-top: 10px;
+    }
+    .buttons {
+      text-align: center;
+      margin-top: 25px;
+    }
+    .buttons input {
+      margin: 5px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .submit-btn { background-color: #27ae60; color: white; }
+    .reset-btn { background-color: #c0392b; color: white; }
+    .exit-btn { background-color: #7f8c8d; color: white; }
+  </style>
+</head>
+<body>
+
+  <div class="form-box">
+    <h2>Inscription Étudiant</h2>
+
+    <form>
+      <fieldset>
+        <legend>Informations personnelles</legend>
+        <label>Nom complet :</label>
+        <input type="text" name="nom">
+
+        <label>Courriel :</label>
+        <input type="email" name="email">
+
+        <label>Téléphone :</label>
+        <input type="text" name="telephone">
+
+        <label>Genre :</label>
+        <select name="genre">
+          <option value="">-- Sélectionnez --</option>
+          <option value="femme">Femme</option>
+          <option value="homme">Homme</option>
+          <option value="autre">Autre</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Diplômes obtenus</legend>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="diplome" value="primaire"> CEP</label>
+          <label><input type="checkbox" name="diplome" value="college"> BEPC</label>
+          <label><input type="checkbox" name="diplome" value="lycee"> BAC</label>
+          <label><input type="checkbox" name="diplome" value="superieur"> LICENCE</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Coordonnées</legend>
+        <label>Adresse complète :</label>
+        <textarea name="adresse" rows="3"></textarea>
+
+        <label>Pays de résidence :</label>
+        <div class="radio-group">
+          <label><input type="radio" name="pays" value="cote"> Côte d’Ivoire</label>
+          <label><input type="radio" name="pays" value="benin"> Bénin</label>
+          <label><input type="radio" name="pays" value="france"> France</label>
+          <label><input type="radio" name="pays" value="autre">  Autre </label>
+        </div>
+      </fieldset>
+
+      <div class="buttons">
+        <input type="submit" value="Soumettre" class="submit-btn">
+        <input type="reset" value="Réinitialiser" class="reset-btn">
+        <input type="button" value="Quitter" class="exit-btn" onclick="window.close();">
+        
+      </div>
+    </form>
+  </div>
+
+</body>
+</html> 
